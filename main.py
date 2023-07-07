@@ -6,12 +6,12 @@ It echoes any incoming text messages.
 import logging
 from aiogram import Bot, Dispatcher, executor, types
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
 
-# Initialize bot and dispatcher
+# Read bot token from file
 f_token = open('bot_api_token')
 API_TOKEN = f_token.read()
+
+# Initialize bot and dispatcher
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
